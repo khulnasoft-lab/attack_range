@@ -2,7 +2,7 @@
 
 | branch | build status |
 | ---    | ---          |
-| develop| [![develop status](https://circleci.com/gh/splunk/attack_range/tree/develop.svg?style=svg&circle-token=67ad1fa7779c57d7e5bcfc42bd617baf607ec269)](https://circleci.com/gh/splunk/attack_range/tree/develop)|
+| develop| [![develop status](https://circleci.com/gh/khulnasoft-lab/attack_range/tree/develop.svg?style=svg&circle-token=67ad1fa7779c57d7e5bcfc42bd617baf607ec269)](https://circleci.com/gh/khulnasoft-lab/attack_range/tree/develop)|
 
 ## Purpose 🛡
 The Attack Range is a detection development platform, which solves three main challenges in detection engineering. First, the user is able to build quickly a small lab infrastructure as close as possible to a production environment. Second, the Attack Range performs attack simulation using different engines such as Atomic Red Team or Caldera in order to generate real attack data. Third, it integrates seamlessly into any Continuous Integration / Continuous Delivery (CI/CD) pipeline to automate the detection rule testing process.  
@@ -18,16 +18,16 @@ The Attack Range is a detection development platform, which solves three main ch
 Attack Range can be built in three different ways:
 
 - **cloud** using terraform and AWS or Azure.
-- **locally** with vagrant and virtualbox see the [attack\_range\_local](https://github.com/splunk/attack_range_local/) project for details
-- **serverless** see the [attack\_range\_cloud](https://github.com/splunk/attack_range_cloud/) project for details
+- **locally** with vagrant and virtualbox see the [attack\_range\_local](https://github.com/khulnasoft-lab/attack_range_local/) project for details
+- **serverless** see the [attack\_range\_cloud](https://github.com/khulnasoft-lab/attack_range_cloud/) project for details
 
 ## Installation 🏗
 
-### [AWS and Ubuntu 18.04](https://github.com/splunk/attack_range/wiki/AWS:-Ubuntu-18.04-Installation)
+### [AWS and Ubuntu 18.04](https://github.com/khulnasoft-lab/attack_range/wiki/AWS:-Ubuntu-18.04-Installation)
 
-### [AWS and MacOS](https://github.com/splunk/attack_range/wiki/AWS:-MacOS-Installation)
+### [AWS and MacOS](https://github.com/khulnasoft-lab/attack_range/wiki/AWS:-MacOS-Installation)
 
-### [Azure and MacOS](https://github.com/splunk/attack_range/wiki/Azure:-MacOS-Installation)
+### [Azure and MacOS](https://github.com/khulnasoft-lab/attack_range/wiki/Azure:-MacOS-Installation)
 
 
 ## Architecture 🏯
@@ -43,9 +43,9 @@ The virtualized deployment of Attack Range consists of:
 - Phantom Server
 - Zeek Sensor
 
-Which can be added/removed/configured using [attack_range.conf](https://github.com/splunk/attack_range/blob/develop/attack_range.conf.template). More machines such as Phantom, Linux server, Linux client, MacOS clients are currently under development.
+Which can be added/removed/configured using [attack_range.conf](https://github.com/khulnasoft-lab/attack_range/blob/develop/attack_range.conf.template). More machines such as Phantom, Linux server, Linux client, MacOS clients are currently under development.
 
-An approxiamte **cost estimate** for running attack_range on AWS can be found [here](https://github.com/splunk/attack_range/wiki/Cost-Estimates).
+An approxiamte **cost estimate** for running attack_range on AWS can be found [here](https://github.com/khulnasoft-lab/attack_range/wiki/Cost-Estimates).
 
 #### Logging
 The following log sources are collected from the machines:
@@ -130,7 +130,7 @@ python attack_range.py replay -dn data_dump --dump windows_sec_events
 ```
 
 ## Features 💍
-- [Splunk Server](https://github.com/splunk/attack_range/wiki/Splunk-Server)
+- [Splunk Server](https://github.com/khulnasoft-lab/attack_range/wiki/Splunk-Server)
   * Indexing of Microsoft Event Logs, PowerShell Logs, Sysmon Logs, DNS Logs, ...
   * Preconfigured with multiple TAs for field extractions
   * Out of the box Splunk detections with Enterprise Security Content Update ([ESCU](https://splunkbase.splunk.com/app/3449/)) App
@@ -140,16 +140,16 @@ python attack_range.py replay -dn data_dump --dump windows_sec_events
 
 - [Splunk Enterprise Security](https://splunkbase.splunk.com/app/263/)
   * [Splunk Enterprise Security](https://splunkbase.splunk.com/app/263/) is a premium security solution requiring a paid license.
-  * Enable or disable [Splunk Enterprise Security](https://splunkbase.splunk.com/app/263/) in [attack_range.conf](https://github.com/splunk/attack_range/blob/develop/attack_range.conf.template)
+  * Enable or disable [Splunk Enterprise Security](https://splunkbase.splunk.com/app/263/) in [attack_range.conf](https://github.com/khulnasoft-lab/attack_range/blob/develop/attack_range.conf.template)
   * Purchase a license, download it and store it in the apps folder to use it.
 
 - [Splunk Phantom](https://www.splunk.com/en_us/software/splunk-security-orchestration-and-automation.html)
   * [Splunk Phantom](https://www.splunk.com/en_us/software/splunk-security-orchestration-and-automation.html) is a Security Orchestration and Automation platform
   * For a free development license (100 actions per day) register [here](https://my.phantom.us/login/?next=/)
-  * Enable or disable [Splunk Phantom](https://www.splunk.com/en_us/software/splunk-security-orchestration-and-automation.html) in [attack_range.conf](https://github.com/splunk/attack_range/blob/develop/attack_range.conf.template)
+  * Enable or disable [Splunk Phantom](https://www.splunk.com/en_us/software/splunk-security-orchestration-and-automation.html) in [attack_range.conf](https://github.com/khulnasoft-lab/attack_range/blob/develop/attack_range.conf.template)
 
-- [Windows Domain Controller & Window Server & Windows 10 Client](https://github.com/splunk/attack_range/wiki/Windows-Infrastructure)
-  * Can be enabled, disabled and configured over [attack_range.conf](https://github.com/splunk/attack_range/blob/develop/attack_range.conf.template)
+- [Windows Domain Controller & Window Server & Windows 10 Client](https://github.com/khulnasoft-lab/attack_range/wiki/Windows-Infrastructure)
+  * Can be enabled, disabled and configured over [attack_range.conf](https://github.com/khulnasoft-lab/attack_range/blob/develop/attack_range.conf.template)
   * Collecting of Microsoft Event Logs, PowerShell Logs, Sysmon Logs, DNS Logs, ...
   * Sysmon log collection with customizable Sysmon configuration
   * RDP connection over port 3389 with user Administrator
@@ -171,7 +171,7 @@ python attack_range.py replay -dn data_dump --dump windows_sec_events
   * This will create instances tagged with `${range_name}-${instance_name}`
 
 ## Support 📞
-Please use the [GitHub issue tracker](https://github.com/splunk/attack_range/issues) to submit bugs or request features.
+Please use the [GitHub issue tracker](https://github.com/khulnasoft-lab/attack_range/issues) to submit bugs or request features.
 
 If you have questions or need support, you can:
 

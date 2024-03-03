@@ -32,7 +32,7 @@ instance_type_vms = Standard_D4_v4
 [range_settings]
 key_name = attack-range-key-pair
 # please configure your ssh key name on aws
-# for instructions visit: https://github.com/splunk/attack_range/wiki/Ubuntu-18.04-Installation
+# for instructions visit: https://github.com/khulnasoft-lab/attack_range/wiki/Ubuntu-18.04-Installation
 
 ip_whitelist = 0.0.0.0/0
 # Blocks from which Attack Range machines can be reached.
@@ -327,7 +327,7 @@ windows_client_private_ip = 10.0.1.17
 windows_client_os = import-ami-0e5a092cc20dbb992
 # specify the windows server operating System
 # specify the ami name
-# instructions to upload your own Windows 10 ami: https://github.com/splunk/attack_range/wiki/Upload-Windows-10-AMI-to-AWS
+# instructions to upload your own Windows 10 ami: https://github.com/khulnasoft-lab/attack_range/wiki/Upload-Windows-10-AMI-to-AWS
 
 windows_client_join_domain = 1
 # specify if the windows client should join the windows domain
